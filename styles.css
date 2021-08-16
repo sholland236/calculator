@@ -7,7 +7,6 @@
 .calculator {
   background-color: #9A031E;
   border: 3px solid black;
-  border-radius: 7px;
   width: 100vw;
   height: 100vh;
   padding: 20px;
@@ -29,7 +28,8 @@
 .calculator button {
   background-color: white;
   border: 3px solid black;
-  border-radius: 3px;
+  border-radius: 50%;
   font-size: 30px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 7px black;
 }
