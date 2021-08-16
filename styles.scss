@@ -1,3 +1,6 @@
+@import 'assets/styles/_variables';
+@import 'assets/styles/_typography';
+
 * {
     padding: 0;
     margin: 0;
@@ -9,7 +12,7 @@ body {
 }
 
 .calculator {
-    background-color: #9A031E;
+    background-color: $primary-color;
     border: 3px solid black;
     border-radius: 7px;
     width: auto;
@@ -35,6 +38,6 @@ body {
         border: 3px solid black;
         border-radius: 3px;
         font-size: 30px;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: $button-font;
     }
 }
