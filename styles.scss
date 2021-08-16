@@ -8,3 +8,33 @@ body {
     padding: 50px;
 }
 
+.calculator {
+    background-color: #9A031E;
+    border: 3px solid black;
+    border-radius: 7px;
+    width: auto;
+    max-width: 500px;
+    height: 800px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    &__output {
+        grid-row: span 2;
+        grid-column: span 4;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 3px;
+    }
+    &__double {
+        grid-column: span 2;
+    }
+    button {
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 3px;
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+}
