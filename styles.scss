@@ -7,21 +7,18 @@
     box-sizing: border-box;
 }
 
-body {
-    padding: 50px;
-}
+// MOBILE CODE FIRST
 
 .calculator {
     background-color: $primary-color;
     border: 3px solid black;
     border-radius: 7px;
-    width: auto;
-    max-width: 500px;
-    height: 800px;
+    width: 100vw;
+    height: 100vh;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, 1fr);
     gap: 20px;
     &__output {
         grid-row: span 2;
