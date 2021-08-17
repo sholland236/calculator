@@ -40,4 +40,10 @@
     border-radius: 7px;
     margin: 30px;
   }
+
+  button:hover {
+    background-color: black;
+    border: 3px solid white;
+    color: white;
+  }
 }
