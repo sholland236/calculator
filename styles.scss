@@ -8,11 +8,11 @@
 }
 
 // MOBILE CODE FIRST
+// also fine for tablet landscape
 
 .calculator {
     background-color: $primary-color;
     border: 3px solid black;
-    // border-radius: 7px;
     width: 100vw;
     height: 100vh;
     padding: 20px;
@@ -37,5 +37,16 @@
         border-radius: 50%;
         font-size: 30px;
         font-family: $button-font;
+    }
+}
+
+// DESKTOP CODE
+
+@media screen and (min-width: 1000px) {
+    .calculator {
+        max-width: 500px;
+        max-height: 800px;
+        border-radius: 7px;
+        margin: 30px;
     }
 }
