@@ -12,7 +12,7 @@
 
 .calculator {
     background-color: $primary-color;
-    border: 3px solid black;
+    border: 5px solid black;
     width: 100vw;
     height: 100vh;
     padding: 20px;
@@ -24,7 +24,7 @@
         grid-row: span 2;
         grid-column: span 4;
         background-color: white;
-        border: 3px solid black;
+        border: 5px solid black;
         border-radius: 3px;
     }
     &__double {
@@ -37,6 +37,8 @@
         border-radius: 50%;
         font-size: 30px;
         font-family: $button-font;
+        font-weight: bold;
+        box-shadow: 5px 8px black;
     }
 }
 
@@ -49,10 +51,16 @@
         border-radius: 7px;
         margin: 30px;
     }
-
+    
     button:hover {
         background-color: black;
         border: 3px solid white;
         color: white;
     }
 }
+
+
+
+
+
+// on click - whole button goes black
