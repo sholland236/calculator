@@ -16,11 +16,16 @@
   gap: 20px;
 }
 .calculator__output {
+  padding: 10px;
   grid-row: span 2;
   grid-column: span 4;
   background-color: white;
   border: 5px solid black;
   border-radius: 3px;
+  font-size: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .calculator__double {
   grid-column: span 2;
@@ -41,6 +46,9 @@
     max-height: 800px;
     border-radius: 7px;
     margin: 30px;
+  }
+  .calculator__output {
+    font-size: 90px;
   }
 
   button:hover {

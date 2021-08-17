@@ -12,7 +12,7 @@
 
 .calculator {
     background-color: $primary-color;
-    border: 5px solid black;
+    border: 5px solid $tertiary-color;
     width: 100vw;
     height: 100vh;
     padding: 20px;
@@ -21,24 +21,29 @@
     grid-template-rows: repeat(7, 1fr);
     gap: 20px;
     &__output {
+        padding: 10px;
         grid-row: span 2;
         grid-column: span 4;
-        background-color: white;
-        border: 5px solid black;
+        background-color: $secondary-color;
+        border: 5px solid $tertiary-color;
         border-radius: 3px;
+        font-size: 70px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
     }
     &__double {
         grid-column: span 2;
     }
     button {
-        background-color: white;
-        border: 3px solid black;
+        background-color: $secondary-color;
+        border: 3px solid $tertiary-color;
         // use border-radius 50% to make buttons round
         border-radius: 50%;
         font-size: 30px;
         font-family: $button-font;
         font-weight: bold;
-        box-shadow: 5px 8px black;
+        box-shadow: 5px 8px $tertiary-color;
     }
 }
 
@@ -50,12 +55,15 @@
         max-height: 800px;
         border-radius: 7px;
         margin: 30px;
+        &__output {
+            font-size: 90px;
+        }
     }
     
     button:hover {
-        background-color: black;
-        border: 3px solid white;
-        color: white;
+        background-color: $tertiary-color;
+        border: 3px solid $secondary-color;
+        color: $secondary-color;
     }
 }
 
@@ -63,4 +71,6 @@
 
 
 
-// on click - whole button goes black
+// on click desktop - whole button goes black
+// on click mobile - hover styling on desktop
+// on click, remove box shadow/'pressing' effect
