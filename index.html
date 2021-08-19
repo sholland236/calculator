@@ -10,27 +10,30 @@
 </head>
 <body>
     <section class=calculator>
+        <!-- make a text box -->
+        <!-- <input type="text" value="0" readonly" /> -->
         <div class="calculator__output">
             0
         </div>
         <button class="calculator__double">C</button>
         <button>%</button>
-        <button><span class="fas fa-divide"></span></button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>x</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
-        <button>0</button>
+        <button id="divide"><span class="fas fa-divide"></span></button>
+        <button onclick="pressButton(7)">7</button>
+        <button onclick="pressButton(8)">8</button>
+        <button onclick="pressButton(9)">9</button>
+        <button id="multiply">x</button>
+        <button onclick="pressButton(4)">4</button>
+        <button onclick="pressButton(5)">5</button>
+        <button onclick="pressButton(6)">6</button>
+        <button id="subtract">-</button>
+        <button onclick="pressButton(1)">1</button>
+        <button onclick="pressButton(2)">2</button>
+        <button onclick="pressButton(3)">3</button>
+        <button id="add">+</button>
+        <button onclick="pressButton(0)">0</button>
         <button>.</button>
         <button class="calculator__double">=</button>
     </section>
+    <script src="./calculations.js"></script>
 </body>
 </html>
