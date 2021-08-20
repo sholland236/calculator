@@ -1,5 +1,6 @@
 const calculatorOutput = document.querySelector(".calculator__output");
 const clearButton = document.querySelector(".clear_button");
+const digits = document.querySelectorAll(".digit");
 
 // storage variables
 let leftOperand = 0;
@@ -15,6 +16,12 @@ const pressButton = (number) => {
         calculatorOutput.innerHTML += number;
     }
 }
+// digits.addEventListener("click", pressButton());
+digits.forEach((digit) => {
+    digit.addEventListener("click", () => {
+        pressButton(digit.innerHTML);
+    })
+})
 
 // operator function
 const pressOperator = (action) => {
@@ -36,7 +43,6 @@ const pressOperator = (action) => {
 }
 
 // result function
-// WRITE AS SWITCH?
 const resultFn = (leftOperand, rightOperand, operator) => {
     rightOperand = calculatorOutput.innerHTML;
     if (operator === "add") {
@@ -52,6 +58,7 @@ const resultFn = (leftOperand, rightOperand, operator) => {
         let sum = divide(leftOperand, rightOperand);
         result = sum;
     }
+    // WHY DOESNT THIS WORK?
     // switch (operator) {
     //     case "add": let sum = add(leftOperand,rightOperand);
     //     result = sum;
