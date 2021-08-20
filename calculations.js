@@ -17,27 +17,26 @@ const pressButton = (number) => {
 }
 
 // operator function
-// WRITE AS SWITCH?
 const pressOperator = (action) => {
     leftOperand = calculatorOutput.innerHTML;
-    if (action == add) {
-        operator = "add";
+    switch (action) {
+        case add: operator = "add";
         calculatorOutput.innerHTML = 0;
-    } else if (action == subtract) {
-        operator = "subtract";
+        break;
+        case subtract: operator = "subtract";
         calculatorOutput.innerHTML = 0;
-    } else if (action == multiply) {
-        operator = "multiply";
+        break;
+        case multiply: operator = "multiply";
         calculatorOutput.innerHTML = 0;
-    } else if (action == divide) {
-        operator = "divide";
+        break;
+        case divide: operator = "divide";
         calculatorOutput.innerHTML = 0;
+        break;
     }
 }
 
 // result function
 // WRITE AS SWITCH?
-// still need to assign to result and display in output     !!!
 const resultFn = (leftOperand, rightOperand, operator) => {
     rightOperand = calculatorOutput.innerHTML;
     if (operator === "add") {
@@ -53,6 +52,20 @@ const resultFn = (leftOperand, rightOperand, operator) => {
         let sum = divide(leftOperand, rightOperand);
         result = sum;
     }
+    // switch (operator) {
+    //     case "add": let sum = add(leftOperand,rightOperand);
+    //     result = sum;
+    //     break;
+    //     case "subtract": let sum = subtract(leftOperand, rightOperand);
+    //     result = sum;
+    //     break;
+    //     case "multiply": let sum = multiply(leftOperand, rightOperand);
+    //     result = sum;
+    //     break;
+    //     case "divide": let sum = divide(leftOperand, rightOperand);
+    //     result = sum;
+    //     break;
+    // }
     calculatorOutput.innerHTML = result;
 }
 
