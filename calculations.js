@@ -15,38 +15,58 @@ const pressButton = (number) => {
     }
 }
 
-// clear function - first line works - do last two?
-const clearOutput = () => {
-    calculatorOutput.innerHTML = 0;
-    leftOperand = 0;
-    rightOperand = 0;
+// operator function
+// WRITE AS SWITCH?
+const pressOperator = (action) => {
+    leftOperand = calculatorOutput.innerHTML;
+    if (action == add) {
+        operator = "add";
+        calculatorOutput.innerHTML = 0;
+        console.log("pressOperator")
+    } else if (action == subtract) {
+        operator = "subtract";
+        calculatorOutput.innerHTML = 0;
+    } else if (action == multiply) {
+        opertor = "multiply";
+        calculatorOutput.innerHTML = 0;
+    } else if (action == divide) {
+        operator = "divide";
+        calculatorOutput.innerHTML = 0;
+    }
 }
 
-// create a variable and function to set operator       !!!
-
 // result function
+// WRITE AS SWITCH?
 // still need to assign to result and display in output     !!!
 const resultFn = (leftOperand, rightOperand, operator) => {
-    if (operator.id === "add") {
+    rightOperand = calculatorOutput.innerHTML;
+    if (operator === "add") {
         let sum = add(leftOperand,rightOperand);
         result = sum;
-    } else if (operator.id === "subtract") {
+        console.log("resultFn");
+    } else if (operator === "subtract") {
         subtract(leftOperand, rightOperand);
-    } else if (operator.id === "multiply") {
+        result = sum;
+    } else if (operator === "multiply") {
         multiply(leftOperand, rightOperand);
-    } else if (operator.id === "divide") {
+        result = sum;
+    } else if (operator === "divide") {
         divide(leftOperand, rightOperand);
+        result = sum;
     }
+    calculatorOutput.innerHTML = result;
 }
 
 // addition function
 const add = (a, b) => {
+    console.log(a);
+    console.log(b);
     return a + b;
 }
 
 // subtraction function
 const subtract = (a, b) => {
-    return a-b;
+    return a - b;
 }
 
 //  multiplication function
@@ -57,4 +77,11 @@ const multiply = (a, b) => {
 // division function
 const divide = (a, b) => {
     return a / b;
+}
+
+// clear function - first line works - do last two?
+const clearOutput = () => {
+    calculatorOutput.innerHTML = 0;
+    leftOperand = 0;
+    rightOperand = 0;
 }

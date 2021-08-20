@@ -17,22 +17,22 @@
         </div>
         <button onclick="clearOutput()" class="calculator__double">C</button>
         <button>%</button>
-        <button class="operator" id="divide"><span class="fas fa-divide"></span></button>
+        <button onclick="pressOperator(divide)" class="operator" id="divide"><span class="fas fa-divide"></span></button>
         <button onclick="pressButton(7)">7</button>
         <button onclick="pressButton(8)">8</button>
         <button onclick="pressButton(9)">9</button>
-        <button class="operator" id="multiply">x</button>
+        <button onclick="pressOperator(multiply)" class="operator" id="multiply">x</button>
         <button onclick="pressButton(4)">4</button>
         <button onclick="pressButton(5)">5</button>
         <button onclick="pressButton(6)">6</button>
-        <button class="operator" id="subtract">-</button>
+        <button onclick="pressOperator(subtract)" class="operator" id="subtract">-</button>
         <button onclick="pressButton(1)">1</button>
         <button onclick="pressButton(2)">2</button>
         <button onclick="pressButton(3)">3</button>
-        <button class="operator" id="add">+</button>
+        <button onclick="pressOperator(add)" class="operator" id="add">+</button>
         <button onclick="pressButton(0)">0</button>
         <button>.</button>
-        <button class="calculator__double">=</button>
+        <button onclick="resultFn(leftOperand, rightOperand, operator)" class="calculator__double">=</button>
     </section>
     <script src="./calculations.js"></script>
 </body>
