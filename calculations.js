@@ -2,6 +2,7 @@ const calculatorOutput = document.querySelector(".calculator__output");
 const clearButton = document.querySelector(".clear_button");
 const digits = document.querySelectorAll(".digit");
 const allOperators = document.querySelectorAll(".operator");
+const equalsButton = document.querySelector(".equals-button");
 
 // storage variables
 let leftOperand = 0;
@@ -68,6 +69,9 @@ const resultFn = (leftOperand, rightOperand, operator) => {
     }
     calculatorOutput.innerHTML = result;
 }
+equalsButton.addEventListener("click", () => {
+    resultFn(leftOperand, rightOperand, operator)
+});
 
 // addition function
 const add = (a, b) => {
