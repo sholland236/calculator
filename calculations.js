@@ -1,6 +1,7 @@
 const calculatorOutput = document.querySelector(".calculator__output");
 const clearButton = document.querySelector(".clear_button");
 const digits = document.querySelectorAll(".digit");
+const allOperators = document.querySelectorAll(".operator");
 
 // storage variables
 let leftOperand = 0;
@@ -8,7 +9,7 @@ let rightOperand = 0;
 let operator;
 let result = 0;
 
-// logic for display when buttons are pressed
+// display when buttons are pressed
 const pressButton = (number) => {
     if (calculatorOutput.innerHTML == 0) {
         calculatorOutput.innerHTML = number;
@@ -16,7 +17,6 @@ const pressButton = (number) => {
         calculatorOutput.innerHTML += number;
     }
 }
-// digits.addEventListener("click", pressButton());
 digits.forEach((digit) => {
     digit.addEventListener("click", () => {
         pressButton(digit.innerHTML);
@@ -27,20 +27,26 @@ digits.forEach((digit) => {
 const pressOperator = (action) => {
     leftOperand = calculatorOutput.innerHTML;
     switch (action) {
-        case add: operator = "add";
+        case "add": operator = "add";
         calculatorOutput.innerHTML = 0;
         break;
-        case subtract: operator = "subtract";
+        case "subtract": operator = "subtract";
         calculatorOutput.innerHTML = 0;
         break;
-        case multiply: operator = "multiply";
+        case "multiply": operator = "multiply";
         calculatorOutput.innerHTML = 0;
         break;
-        case divide: operator = "divide";
+        case "divide": operator = "divide";
         calculatorOutput.innerHTML = 0;
         break;
     }
 }
+allOperators.forEach((clickedOperator) => {
+    clickedOperator.addEventListener("click", () => {
+        pressOperator(clickedOperator.id);
+    })
+})
+
 
 // result function
 const resultFn = (leftOperand, rightOperand, operator) => {
