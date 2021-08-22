@@ -51,34 +51,21 @@ allOperators.forEach((clickedOperator) => {
 // result function
 const resultFn = (leftOperand, rightOperand, operator) => {
     rightOperand = calculatorOutput.innerHTML;
-    if (operator === "add") {
-        let sum = add(leftOperand,rightOperand);
+    let sum = 0;
+    switch (operator) {
+        case "add": sum = add(leftOperand,rightOperand);
         result = sum;
-    } else if (operator === "subtract") {
-        let sum = subtract(leftOperand, rightOperand);
+        break;
+        case "subtract": sum = subtract(leftOperand, rightOperand);
         result = sum;
-    } else if (operator === "multiply") {
-        let sum = multiply(leftOperand, rightOperand);
+        break;
+        case "multiply": sum = multiply(leftOperand, rightOperand);
         result = sum;
-    } else if (operator === "divide") {
-        let sum = divide(leftOperand, rightOperand);
+        break;
+        case "divide": sum = divide(leftOperand, rightOperand);
         result = sum;
+        break;
     }
-    // WHY DOESNT THIS WORK?
-    // switch (operator) {
-    //     case "add": let sum = add(leftOperand,rightOperand);
-    //     result = sum;
-    //     break;
-    //     case "subtract": let sum = subtract(leftOperand, rightOperand);
-    //     result = sum;
-    //     break;
-    //     case "multiply": let sum = multiply(leftOperand, rightOperand);
-    //     result = sum;
-    //     break;
-    //     case "divide": let sum = divide(leftOperand, rightOperand);
-    //     result = sum;
-    //     break;
-    // }
     calculatorOutput.innerHTML = result;
 }
 
