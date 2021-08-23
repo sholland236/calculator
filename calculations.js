@@ -1,5 +1,6 @@
 const calculatorOutput = document.querySelector(".calculator__output");
 const clearButton = document.querySelector(".clear_button");
+const deleteButton = document.querySelector(".delete_button");
 const digits = document.querySelectorAll(".digit");
 const allOperators = document.querySelectorAll(".operator");
 const equalsButton = document.querySelector(".equals-button");
@@ -101,9 +102,19 @@ const divide = (a, b) => {
     return Math.round(a/b * 100000) / 100000;
 }
 
+// clear function
 const clearOutput = () => {
     calculatorOutput.innerHTML = 0;
     leftOperand = 0;
     rightOperand = 0;
 }
 clearButton.addEventListener("click", clearOutput);
+
+// delete function
+// CAN IMPROVE
+const deleteDigit = () => {
+    if(calculatorOutput.innerHTML != 0) {
+        calculatorOutput.innerHTML = calculatorOutput.innerHTML.slice(0, -1);
+    }
+}
+deleteButton.addEventListener("click", deleteDigit);
