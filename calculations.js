@@ -78,28 +78,28 @@ equalsButton.addEventListener("click", () => {
 const add = (a, b) => {
     a = parseFloat(a);
     b = parseFloat(b);
-    return Math.round(a+b * 100000) / 100000;
+    return a + b;
 }
 
 // subtraction function
 const subtract = (a, b) => {
     a = parseFloat(a);
     b = parseFloat(b);
-    return Math.round(a-b * 100000) / 100000;
+    return a - b;
 }
 
 //  multiplication function
 const multiply = (a, b) => {
     a = parseFloat(a);
     b = parseFloat(b);
-    return Math.round(a*b * 100000) / 100000;
+    return a * b;
 }
 
 // division function
 const divide = (a, b) => {
     a = parseFloat(a);
     b = parseFloat(b);
-    return Math.round(a/b * 100000) / 100000;
+    return a / b;
 }
 
 // clear function
