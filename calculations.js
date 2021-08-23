@@ -75,35 +75,32 @@ equalsButton.addEventListener("click", () => {
 
 // addition function
 const add = (a, b) => {
-    a = parseInt(a);
-    b = parseInt(b);
-    return a + b;
+    a = parseFloat(a);
+    b = parseFloat(b);
+    return Math.round(a+b * 100000) / 100000;
 }
 
 // subtraction function
 const subtract = (a, b) => {
-    a = parseInt(a);
-    b = parseInt(b);
-    return a - b;
+    a = parseFloat(a);
+    b = parseFloat(b);
+    return Math.round(a-b * 100000) / 100000;
 }
 
 //  multiplication function
 const multiply = (a, b) => {
-    a = parseInt(a);
-    b = parseInt(b);
-    return a * b;
+    a = parseFloat(a);
+    b = parseFloat(b);
+    return Math.round(a*b * 100000) / 100000;
 }
 
 // division function
 const divide = (a, b) => {
-    a = parseInt(a);
-    b = parseInt(b);
-    return a / b;
+    a = parseFloat(a);
+    b = parseFloat(b);
+    return Math.round(a/b * 100000) / 100000;
 }
 
-
-
-// clear function - first line works - do last two?
 const clearOutput = () => {
     calculatorOutput.innerHTML = 0;
     leftOperand = 0;
