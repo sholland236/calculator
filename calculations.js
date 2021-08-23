@@ -114,6 +114,7 @@ clearButton.addEventListener("click", clearOutput);
 // CAN IMPROVE
 const deleteDigit = () => {
     if(calculatorOutput.innerHTML != 0) {
+        // slice(0, -1) will remove last digit
         calculatorOutput.innerHTML = calculatorOutput.innerHTML.slice(0, -1);
     }
 }
