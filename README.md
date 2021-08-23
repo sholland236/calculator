@@ -1,2 +1,3 @@
 # calculator
-calculator using javascript
+Calculator project using javascript
+Creating functionality for basic calculator buttons
