@@ -50,11 +50,17 @@
 // DESKTOP CODE
 
 @media screen and (min-width: 1000px) {
+    body {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
     .calculator {
         max-width: 500px;
         max-height: 800px;
         border-radius: 7px;
-        margin: 30px;
         &__output {
             font-size: 90px;
         }
