@@ -31,6 +31,9 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
+        // stop digits going over end of calculator screen
+        // digits can keep being typed - how to resolve this?
+        overflow-x: hidden;
     }
     &__double {
         grid-column: span 2;

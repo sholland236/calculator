@@ -30,17 +30,17 @@ const pressOperator = (action) => {
     leftOperand = calculatorOutput.innerHTML;
     switch (action) {
         case "add": operator = "add";
-        calculatorOutput.innerHTML = 0;
-        break;
+                    calculatorOutput.innerHTML = 0;
+                    break;
         case "subtract": operator = "subtract";
-        calculatorOutput.innerHTML = 0;
-        break;
+                        calculatorOutput.innerHTML = 0;
+                        break;
         case "multiply": operator = "multiply";
-        calculatorOutput.innerHTML = 0;
-        break;
+                        calculatorOutput.innerHTML = 0;
+                        break;
         case "divide": operator = "divide";
-        calculatorOutput.innerHTML = 0;
-        break;
+                        calculatorOutput.innerHTML = 0;
+                        break;
     }
 }
 allOperators.forEach((clickedOperator) => {
@@ -56,17 +56,17 @@ const resultFn = (leftOperand, rightOperand, operator) => {
     let sum = 0;
     switch (operator) {
         case "add": sum = add(leftOperand,rightOperand);
-        result = sum;
-        break;
+                    result = sum;
+                    break;
         case "subtract": sum = subtract(leftOperand, rightOperand);
-        result = sum;
-        break;
+                        result = sum;
+                        break;
         case "multiply": sum = multiply(leftOperand, rightOperand);
-        result = sum;
-        break;
+                        result = sum;
+                        break;
         case "divide": sum = divide(leftOperand, rightOperand);
-        result = sum;
-        break;
+                        result = sum;
+                        break;
     }
     calculatorOutput.innerHTML = result;
 }
