@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Calculator project using javascript Creating functionality for basic calculator buttons",
+  "main": "calculations.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sholland236/calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sholland236/calculator/issues"
+  },
+  "homepage": "https://github.com/sholland236/calculator#readme",
+  "devDependencies": {
+    "cypress": "^8.3.1"
+  }
+}
