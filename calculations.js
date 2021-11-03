@@ -76,32 +76,32 @@ equalsButton.addEventListener("click", () => {
 });
 
 // addition function
-const add = (a, b) => {
-    a = parseFloat(a);
-    b = parseFloat(b);
-    return a + b;
-}
+// const add = (a, b) => {
+//     a = parseFloat(a);
+//     b = parseFloat(b);
+//     return a + b;
+// }
 
 // subtraction function
-const subtract = (a, b) => {
-    a = parseFloat(a);
-    b = parseFloat(b);
-    return a - b;
-}
+// const subtract = (a, b) => {
+//     a = parseFloat(a);
+//     b = parseFloat(b);
+//     return a - b;
+// }
 
 //  multiplication function
-const multiply = (a, b) => {
-    a = parseFloat(a);
-    b = parseFloat(b);
-    return a * b;
-}
+// const multiply = (a, b) => {
+//     a = parseFloat(a);
+//     b = parseFloat(b);
+//     return a * b;
+// }
 
 // division function
-const divide = (a, b) => {
-    a = parseFloat(a);
-    b = parseFloat(b);
-    return a / b;
-}
+// const divide = (a, b) => {
+//     a = parseFloat(a);
+//     b = parseFloat(b);
+//     return a / b;
+// }
 
 // clear function
 const clearOutput = () => {
