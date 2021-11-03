@@ -1,3 +1,8 @@
+import add from "./addition.js";
+import subtract from "./subtraction.js";
+import multiply from "./multiply.js";
+import divide from "./divide.js";
+
 const calculatorOutput = document.querySelector(".calculator__output");
 const clearButton = document.querySelector(".clear_button");
 const deleteButton = document.querySelector(".delete_button");
@@ -16,7 +21,9 @@ const pressButton = (number) => {
     if (calculatorOutput.innerHTML == 0) {
         calculatorOutput.innerHTML = number;
     } else {
-        calculatorOutput.innerHTML += number;
+        if (calculatorOutput.innerHTML.toString().length < 9) {
+            calculatorOutput.innerHTML += number;
+        }
     }
 }
 digits.forEach((digit) => {
@@ -75,34 +82,6 @@ equalsButton.addEventListener("click", () => {
     resultFn(leftOperand, rightOperand, operator)
 });
 
-// addition function
-// const add = (a, b) => {
-//     a = parseFloat(a);
-//     b = parseFloat(b);
-//     return a + b;
-// }
-
-// subtraction function
-// const subtract = (a, b) => {
-//     a = parseFloat(a);
-//     b = parseFloat(b);
-//     return a - b;
-// }
-
-//  multiplication function
-// const multiply = (a, b) => {
-//     a = parseFloat(a);
-//     b = parseFloat(b);
-//     return a * b;
-// }
-
-// division function
-// const divide = (a, b) => {
-//     a = parseFloat(a);
-//     b = parseFloat(b);
-//     return a / b;
-// }
-
 // clear function
 const clearOutput = () => {
     calculatorOutput.innerHTML = 0;
@@ -112,7 +91,6 @@ const clearOutput = () => {
 clearButton.addEventListener("click", clearOutput);
 
 // delete function
-// CAN IMPROVE
 const deleteDigit = () => {
     if(calculatorOutput.innerHTML != 0) {
         // slice(0, -1) will remove last digit
