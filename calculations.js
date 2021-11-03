@@ -68,7 +68,8 @@ const resultFn = (leftOperand, rightOperand, operator) => {
                         result = sum;
                         break;
     }
-    calculatorOutput.innerHTML = result;
+    let stringResult = result.toString();
+    calculatorOutput.innerHTML = stringResult.substring(0,10);
 }
 equalsButton.addEventListener("click", () => {
     resultFn(leftOperand, rightOperand, operator)
