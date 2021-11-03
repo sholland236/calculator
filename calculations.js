@@ -22,7 +22,9 @@ const pressButton = (number) => {
         calculatorOutput.innerHTML = number;
     } else {
         if (calculatorOutput.innerHTML.toString().length < 9) {
-            calculatorOutput.innerHTML += number;
+            if (number != "." || (number == "." && !calculatorOutput.innerHTML.includes("."))) {
+                calculatorOutput.innerHTML += number;
+            }
         }
     }
 }
