@@ -28,7 +28,11 @@ const pressButton = (number) => {
 }
 digits.forEach((digit) => {
     digit.addEventListener("click", () => {
-        pressButton(digit.innerHTML);
+        if (digit.innerHTML === "NEG") {
+            pressButton("-");
+        } else {
+            pressButton(digit.innerHTML);
+        }
     })
 })
 
