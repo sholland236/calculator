@@ -6,4 +6,5 @@ This calculator project has been created in order to provide basic functionality
 - HTML
 - SCSS
 - Vanilla Javascript
-- Cypress for testing
+- Cypress for end-to-end testing
+- Jest for unit testing
